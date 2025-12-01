@@ -23,7 +23,7 @@ export default function Register() {
     e.preventDefault();
 
     try {
-      const res = await fetch(`${import.meta.env.REACT_APP_API_URL}/api/auth/registro`, {
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/registro`,form);, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
