@@ -27,7 +27,7 @@ function CRUDDemo({ productos, setProductos }) {
     setPrecio(0);
 
     try {
-      const res = await fetch("http://localhost:3001/api/productos", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/productos`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ nombre, precio: Number(precio) }),
