@@ -24,7 +24,7 @@ function DetalleProducto({
     const fetchProductos = async () => {
       setLoading(true);
       try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/productos`);
+        const res = await fetch(`${process.env.REACT_APP_API_URL}/api/productos`);
 
         if (!res.ok)
           throw new Error("Error al cargar productos desde el backend");
